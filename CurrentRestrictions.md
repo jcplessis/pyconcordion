@@ -1,0 +1,10 @@
+# Introduction #
+
+A few restrictions are placed on current version of PyConcordion, due to technical problems.
+
+
+# Details #
+
+  * You have to follow naming conventions (same as in Concordion itself) that are :
+    * `MyPage.html` for you test specification
+    * `MyPageTest.py` containing a class named `MyPageTest` for your fixture

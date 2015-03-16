@@ -1,0 +1,66 @@
+# Introduction #
+
+This is a (very) short example to show how to use PyConcordion.
+In 2 minutes you should see what it really provides and how to write a test.
+
+# Details #
+
+In a folder we create two files : MyExampleTest.py and MyExample.html _(note that the naming is enforced by PyConcordion, if the html is called **X.html**, your fixture must be called **XTest.py** and contain a class whose name is **XTest**)_
+
+Here is the content of MyExampleTest.py :
+```
+#! /usr/bin/python
+
+class MyExampleTest:
+
+   def getMessage(self):
+      return "Concordion supports python"
+
+```
+
+Here is the content of the html file :
+
+```
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<body>
+
+    <h1>Python integration</h1>
+
+    <p>
+       <code>pyConcordion</code> let you write concordion test cases in python.
+    </p>
+
+    <div class="example">
+
+        <h3>Example</h3>
+
+        <p>This test is the proof.</p>
+
+        <p concordion:assertEquals="getMessage()">Concordion supports python</p>
+    </div>
+
+
+</body>
+</html>
+```
+
+Now you can run the test by simply running the python script provided:
+> _python2.6 folder\_runner.py folder\_containing\_tests_
+
+You should get an output looking like :
+```
+JUnit version 3.8.2
+./tmp/MyExample.html
+Successes: 1, Failures: 0
+
+
+Time: 0,729
+
+OK (1 test)
+```
+
+And the generated html file should be like :
+
+![http://img505.imageshack.us/img505/6273/concordionhn2.png](http://img505.imageshack.us/img505/6273/concordionhn2.png)
+
+You're now ready to write your own tests !

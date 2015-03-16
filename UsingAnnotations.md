@@ -1,0 +1,19 @@
+# In python 2.6 #
+```
+from concordion.annotation import ExpectedToFail
+
+@ExpectedToFail
+class AnnotationExampleTest:
+
+        def isFalse(self):
+                return False
+```
+# In python 2.5 #
+```
+from concordion.annotation import ExpectedToFailClass
+
+class AnnotationExampleTest(ExpectedToFailClass):
+
+        def isFalse(self):
+                return False
+```
